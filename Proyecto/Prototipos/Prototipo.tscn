@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Prototipos/TanqueRojo.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Prototipos/assets/environment/Battle_City_bricks.png" type="Texture" id=2]
 [ext_resource path="res://Prototipos/TanqueAzul.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prototipos/assets/godot_armado.png" type="Texture" id=4]
+[ext_resource path="res://Prototipos/Ladrillos.tscn" type="PackedScene" id=5]
 
 [node name="Prototipo" type="Node2D"]
 
@@ -20,10 +20,8 @@ texture = ExtResource( 4 )
 
 [node name="Node2D" type="Node2D" parent="."]
 
-[node name="Battle_City_bricks2" type="Sprite" parent="Node2D"]
-position = Vector2( 248, 304 )
-texture = ExtResource( 2 )
+[node name="Ladrillos" parent="Node2D" instance=ExtResource( 5 )]
+position = Vector2( 248, 264 )
 
-[node name="Battle_City_bricks" type="Sprite" parent="Node2D"]
-position = Vector2( 696, 304 )
-texture = ExtResource( 2 )
+[node name="Ladrillos2" parent="Node2D" instance=ExtResource( 5 )]
+position = Vector2( 704, 264 )
