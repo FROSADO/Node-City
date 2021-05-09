@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export var tile_size := 78
+export var tile_size := 64
 export var _speed := 200
 var _velocity = Vector2()
 onready var move_size := tile_size / 4
@@ -12,7 +12,10 @@ onready var move_size := tile_size / 4
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print (position)
+	print (Vector2.ONE * tile_size)
 	position = position.snapped(Vector2.ONE * tile_size)
+	print (position)
 	
 
 
@@ -32,6 +35,7 @@ func _process(delta):
 	if Input.is_action_pressed("ui_up"):
 		$Sprite.rotation_degrees = 0
 		direction = Vector2.UP
-	var _velocity = direction.normalized()  * _speed
-	
+	var _velocity = direction.normalized() * _speed
+	_velocity = _velocity.snapped(Vector2.ONE*tile_size)
+	# print (_velocity)
 	move_and_slide(_velocity)

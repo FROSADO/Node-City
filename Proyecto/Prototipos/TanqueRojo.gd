@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export var tile_size := 78
+export var tile_size := 64
 export var _speed := 200
 var _velocity = Vector2()
 
