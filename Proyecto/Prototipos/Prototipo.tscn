@@ -1,3 +1,26 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Prototipos/TanqueRojo.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Prototipos/assets/environment/enviroment/Battle_City_bricks.png" type="Texture" id=2]
+[ext_resource path="res://Prototipos/TanqueAzul.tscn" type="PackedScene" id=3]
 
 [node name="Prototipo" type="Node2D"]
+
+[node name="TanqueRojo" parent="." instance=ExtResource( 1 )]
+position = Vector2( 256, 296 )
+
+[node name="TanqueAzul" parent="." instance=ExtResource( 3 )]
+position = Vector2( 704, 296 )
+_speed = 100
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Battle_City_bricks2" type="Sprite" parent="Node2D"]
+position = Vector2( 256, 96 )
+texture = ExtResource( 2 )
+
+[node name="Battle_City_bricks" type="Sprite" parent="Node2D"]
+position = Vector2( 704, 96 )
+texture = ExtResource( 2 )
+
+[node name="GrooveJoint2D" type="GrooveJoint2D" parent="."]
