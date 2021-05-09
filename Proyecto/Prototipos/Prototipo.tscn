@@ -1,24 +1,29 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Prototipos/TanqueRojo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prototipos/assets/environment/Battle_City_bricks.png" type="Texture" id=2]
 [ext_resource path="res://Prototipos/TanqueAzul.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prototipos/assets/godot_armado.png" type="Texture" id=4]
 
 [node name="Prototipo" type="Node2D"]
 
 [node name="TanqueRojo" parent="." instance=ExtResource( 1 )]
-position = Vector2( 256, 296 )
+position = Vector2( 248, 504 )
 
 [node name="TanqueAzul" parent="." instance=ExtResource( 3 )]
-position = Vector2( 704, 296 )
+position = Vector2( 696, 504 )
 _speed = 100
+
+[node name="FinalBoss" type="Sprite" parent="."]
+position = Vector2( 472, 88 )
+texture = ExtResource( 4 )
 
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Battle_City_bricks2" type="Sprite" parent="Node2D"]
-position = Vector2( 256, 96 )
+position = Vector2( 248, 304 )
 texture = ExtResource( 2 )
 
 [node name="Battle_City_bricks" type="Sprite" parent="Node2D"]
-position = Vector2( 704, 96 )
+position = Vector2( 696, 304 )
 texture = ExtResource( 2 )
