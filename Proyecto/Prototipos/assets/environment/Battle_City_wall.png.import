@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Battle_City_ice.png-cdd602d58116b3d024a1792bbaf83735.stex"
+path="res://.import/Battle_City_wall.png-1951e57713468ba98c356cdf3b49b43f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Prototipos/assets/environment/enviroment/Battle_City_ice.png"
-dest_files=[ "res://.import/Battle_City_ice.png-cdd602d58116b3d024a1792bbaf83735.stex" ]
+source_file="res://Prototipos/assets/environment/Battle_City_wall.png"
+dest_files=[ "res://.import/Battle_City_wall.png-1951e57713468ba98c356cdf3b49b43f.stex" ]
 
 [params]
 

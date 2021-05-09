@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Battle_City_trees.png-6a5854f81234ff2122e3aab9bb2fb6eb.stex"
+path="res://.import/Battle_City_trees.png-9c7dafaa85d47713c15f3c2ebe4d05a5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Prototipos/assets/environment/enviroment/Battle_City_trees.png"
-dest_files=[ "res://.import/Battle_City_trees.png-6a5854f81234ff2122e3aab9bb2fb6eb.stex" ]
+source_file="res://Prototipos/assets/environment/Battle_City_trees.png"
+dest_files=[ "res://.import/Battle_City_trees.png-9c7dafaa85d47713c15f3c2ebe4d05a5.stex" ]
 
 [params]
 

@@ -34,5 +34,4 @@ func _process(delta):
 		direction = Vector2.UP
 	var _velocity = direction.normalized()  * _speed
 	
-	print (_velocity)
 	move_and_slide(_velocity)

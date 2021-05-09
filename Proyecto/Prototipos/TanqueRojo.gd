@@ -32,5 +32,5 @@ func _process(delta):
 		$Sprite.rotation_degrees = 0
 		direction = Vector2.UP
 	var _velocity = direction.normalized() * _speed
-	print (_velocity)
+
 	move_and_slide(_velocity)

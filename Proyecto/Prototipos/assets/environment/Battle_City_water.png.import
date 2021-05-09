@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Battle_City_bricks.png-3e3a1a0590e61fbed429cd457e0b619a.stex"
+path="res://.import/Battle_City_water.png-77d2dfc1d4c95a84a697c9afdea86794.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Prototipos/assets/environment/enviroment/Battle_City_bricks.png"
-dest_files=[ "res://.import/Battle_City_bricks.png-3e3a1a0590e61fbed429cd457e0b619a.stex" ]
+source_file="res://Prototipos/assets/environment/Battle_City_water.png"
+dest_files=[ "res://.import/Battle_City_water.png-77d2dfc1d4c95a84a697c9afdea86794.stex" ]
 
 [params]
 
