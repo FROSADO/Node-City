@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spritesheet.png-642b7abfdcf5d525fafa8c890f337ee6.stex"
+path="res://.import/icon_espanol.png-b7da5e868eca6f48f22d27083d115599.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Prototipos/Assets/Tank/spritesheet.png"
-dest_files=[ "res://.import/spritesheet.png-642b7abfdcf5d525fafa8c890f337ee6.stex" ]
+source_file="res://icon_espanol.png"
+dest_files=[ "res://.import/icon_espanol.png-b7da5e868eca6f48f22d27083d115599.stex" ]
 
 [params]
 
