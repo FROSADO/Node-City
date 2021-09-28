@@ -1,9 +1,12 @@
 class_name Tank
 extends Area2D
 
+signal tank_destroyed(tank_type)
+
 export var bullet : PackedScene
 export var hp := 1
 export var movement_speed := 200.0
+export var tank_type = "tank"
 
 var speed := 0.0
 var move_size : int
@@ -17,11 +20,12 @@ onready var body := $Body
 onready var bullet_position := $BulletPosition
 onready var canon := $BulletPosition/Canon
 onready var animation_tree := $AnimationPlayer/AnimationTree
-onready var shoot_sfx := $ShootStreamPlayer
+onready var soud_manager:= $SoundManger
 
 func _ready() -> void:
 	tile_size = ProjectSettings.get("game_info/tile_size")
 	# warning-ignore:integer_division
+	connect("tank_destroyed", GameManager, "_on_tank_detroyed")
 	randomize() 
 	move_size = tile_size / 4
 	_snap_position()
@@ -40,12 +44,12 @@ func _physics_process(_delta):
 	if current_direction != Vector2.ZERO and !moving:
 		move_foward()
 	if speed == 0:
-		$MovingStreamPlayer.stop()
-	elif !$MovingStreamPlayer.playing:
-		$MovingStreamPlayer.play()
+		$SoundManger/MovingStreamPlayer.stop()
+	elif !$SoundManger/MovingStreamPlayer.playing:
+		$SoundManger/MovingStreamPlayer.play()
 
 func shoot() -> void:
-	shoot_sfx.play()
+	soud_manager.shoot()
 	var _new_bullet = bullet.instance()
 	_new_bullet.global_position = bullet_position.global_position
 	_new_bullet.init(current_direction, canon.position.y, self)
@@ -83,4 +87,5 @@ func check_collision(_direction : Vector2) -> void:
 	body.look_at(body.global_position + _direction)
 
 func destroy() -> void:
-	pass
+	queue_free()
+	emit_signal("tank_destroyed", tank_type)
